@@ -176,7 +176,35 @@
         };
 
         //usefull mod-morphs
-        dot_colon: dot_colon {
+        colon_semi: colon_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON_TO_SEMICOLON";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dot_comma: dot_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_TO_COMMA";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COMMA>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        lt_gt: lt_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LESSTHAN_TO_GREATERTHAN";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        sqt_dqt: sqt_dqt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SINGLE_TO_DOUBLEQUOTE";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+				dot_colon: dot_colon {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_TO_COLON";
             #binding-cells = <0>;
