@@ -1,57 +1,57 @@
 layout: {qmk_keyboard: chocofi}
 layers:
   APTMAK:
-  - V
+  - Q
+  - D
+  - R
   - W
-  - F
-  - P
   - B
   - J
-  - L
+  - F
   - U
-  - Y
-  - ''''
-  - {t: R, h: '$$mdi:apple-keyboard-control$$'}
+  - P
+  - {t: ':', s: ;}
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: H, h: '$$mdi:apple-keyboard-command$$'}
-  - K
-  - X
-  - {t: N, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: O, h: '$$mdi:apple-keyboard-control$$'}
-  - {type: none}
-  - C
+  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - G
-  - D
-  - {type: none}
-  - {type: none}
+  - Y
+  - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: O, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-control$$'}
+  - Z
+  - X
   - M
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {type: none}
-  - {type: none}
+  - C
+  - V
+  - K
+  - L
+  - {t: ., s: ','}
+  - {t: <, s: '>'}
+  - {t: '''', s: '"'}
+  - $$mdi:backspace-outline$$
   - {t: '$$mdi:keyboard-return$$', h: NUM}
   - {t: '$$mdi:keyboard-space$$', h: NAV, s: $$dot_spc$$}
-  - {t: E, h: SYM}
+  - {t: '$$mdi:keyboard-tab$$', h: SYM}
   - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:star-three-points$$', s: '$$mdi:caps-lock$$'}
-  - {type: none}
+  - $$mdi:backspace-reverse-outline$$
   NAV:
   - {type: none}
   - {type: none}
   - $$tabler:square-x$$
   - $$tabler:browser-x$$
   - {type: none}
-  - $$mdi:monitor-screenshot$$
+  - {type: none}
   - $$pg_dn$$
   - $$mdi:arrow-up-bold$$
   - $$pg_up$$
   - {type: none}
   - {t: '$$mdi:apple-keyboard-control$$', h: '$$tabler:sticker$$'}
   - {t: '$$mdi:apple-keyboard-option$$', h: '$$tabler:sticker$$'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$tabler:sticker$$'}
   - {t: '$$mdi:apple-keyboard-command$$', h: '$$tabler:sticker$$'}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$tabler:sticker$$'}
   - {type: none}
   - {t: '$$mdi:backspace-reverse-outline$$', h: WORD}
   - $$mdi:arrow-left-bold$$
@@ -59,7 +59,6 @@ layers:
   - $$mdi:arrow-right-bold$$
   - $$mdi:power-sleep$$
   - {type: none}
-  - {t: '$$mdi:swap-horizontal$$', h: Windows}
   - {type: none}
   - {t: '$$mdi:swap-horizontal$$', h: Tabs}
   - {type: none}
@@ -70,15 +69,15 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {type: none}
   - {type: none}
   SYM:
   - {type: none}
   - '@'
   - '#'
-  - $/€
+  - $
   - '%'
   - ^
   - +
@@ -155,8 +154,8 @@ layers:
   - $$mdi:apple$$
   - $$mdi:progress-download$$
   - $$mdi:progress-download$$
-  - $$mdi:play-pause$$
   - $$mdi:skip-next$$
+  - $$mdi:play-pause$$
   - $$mdi:skip-previous$$
   - {type: none}
   - {t: '$$mdi:bluetooth$$', h: clear}
