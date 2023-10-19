@@ -57,7 +57,8 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:power-sleep$$
-  - ''
+  - {type: none}
+  - {type: none}
   - {type: none}
   - {t: '$$mdi:swap-horizontal$$', h: Tabs}
   - {type: none}
@@ -68,8 +69,8 @@ layers:
   - {type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYM:
@@ -160,7 +161,10 @@ layers:
   - {t: '$$mdi:bluetooth$$', h: clear}
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:microsoft-windows$$', h: '2'}
-  - '&osx_connect --- --- ---'
+  - {t: '$$mdi:apple$$', h: '1'}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - $$mdi:backup-restore$$
   - $$mdi:backup-restore$$
   - $$mdi:volume-low$$
@@ -170,17 +174,20 @@ layers:
   - {type: none}
   - {t: '$$mdi:bluetooth-connect$$', h: '5'}
   - {t: '$$mdi:bluetooth-connect$$', h: '4'}
-  - OUT TOG --- --- ---
-  - {type: none}
-  - {type: none}
-  - $$mdi:brightness-7$$
-  - $$mdi:brightness-5$$
+  - {t: '$$mdi:toggle-switch-outline$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: held}
-  - {type: held}
+  - {type: none}
+  - {t: '$$mdi:brightness-7$$', type: held}
+  - {t: '$$mdi:brightness-5$$', type: held}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - {type: none}
   - {type: none}
   LOCK:

@@ -57,7 +57,8 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:power-sleep$$
-  - ''
+  - {type: none}
+  - {type: none}
   - {type: none}
   - {t: '$$mdi:swap-horizontal$$', h: Tabs}
   - {type: none}
@@ -68,8 +69,8 @@ layers:
   - {type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYM:
@@ -160,7 +161,10 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - ''
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - $$mdi:backup-restore$$
   - $$mdi:backup-restore$$
   - $$mdi:volume-low$$
@@ -170,17 +174,20 @@ layers:
   - {type: none}
   - {type: none}
   - {type: none}
-  - ''
-  - {type: none}
-  - {type: none}
-  - $$mdi:brightness-7$$
-  - $$mdi:brightness-5$$
   - {type: none}
   - {type: none}
   - {type: none}
   - {type: none}
-  - {type: held}
-  - {type: held}
+  - {type: none}
+  - {type: none}
+  - {t: '$$mdi:brightness-7$$', type: held}
+  - {t: '$$mdi:brightness-5$$', type: held}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
+  - {type: none}
   - {type: none}
   - {type: none}
   LOCK:
