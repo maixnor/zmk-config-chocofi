@@ -32,13 +32,13 @@ layers:
   - {t: <, s: '>'}
   - {t: '''', s: '"'}
   - $$mdi:backspace-outline$$
-  - {t: '$$mdi:keyboard-return$$', h: NUM}
-  - {t: '$$mdi:keyboard-space$$', h: NAV, s: $$dot_spc$$}
-  - {t: '$$mdi:keyboard-tab$$', h: SYM}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:star-three-points$$', s: '$$mdi:caps-lock$$'}
+  - {t: '$$mdi:keyboard-space$$', h: NUM, s: $$dot_spc$$}
+  - {t: '$$mdi:keyboard-return$$', h: NAV}
+  - {t: ESC, h: SYM}
+  - {t: '$$mdi:keyboard-tab$$', h: NUM}
   - $$mdi:backspace-reverse-outline$$
   NAV:
-  - {type: none}
+  - LA(F4)
   - {type: none}
   - $$tabler:square-x$$
   - $$tabler:browser-x$$
@@ -58,7 +58,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - $$mdi:power-sleep$$
-  - {type: none}
+  - ''
   - {type: none}
   - {t: '$$mdi:swap-horizontal$$', h: Tabs}
   - {type: none}
@@ -67,12 +67,12 @@ layers:
   - $$tabler:mouse$$
   - $$tabler:screen-share$$
   - {type: none}
-  - {type: none}
-  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {type: none}
-  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   SYM:
   - {type: none}
   - '@'
@@ -104,12 +104,12 @@ layers:
   - '>'
   - °
   - {type: none}
-  - {type: none}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {type: none}
-  - {type: none}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   NUM:
   - F12
   - F7
@@ -136,17 +136,17 @@ layers:
   - F2
   - F3
   - {type: none}
-  - {type: none}
+  - '0'
   - '1'
   - '2'
   - '3'
   - {type: none}
-  - {type: none}
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - '0'
-  - .
-  - {type: none}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
   ADJ:
   - {type: none}
   - {type: none}
@@ -154,14 +154,14 @@ layers:
   - $$mdi:apple$$
   - $$mdi:progress-download$$
   - $$mdi:progress-download$$
-  - $$mdi:skip-next$$
-  - $$mdi:play-pause$$
   - $$mdi:skip-previous$$
+  - $$mdi:play-pause$$
+  - $$mdi:skip-next$$
   - {type: none}
   - {t: '$$mdi:bluetooth$$', h: clear}
   - {t: '$$mdi:bluetooth-connect$$', h: '3'}
   - {t: '$$mdi:microsoft-windows$$', h: '2'}
-  - {t: '$$mdi:apple$$', h: '1'}
+  - '&osx_connect --- --- ---'
   - $$mdi:backup-restore$$
   - $$mdi:backup-restore$$
   - $$mdi:volume-low$$
@@ -171,7 +171,7 @@ layers:
   - {type: none}
   - {t: '$$mdi:bluetooth-connect$$', h: '5'}
   - {t: '$$mdi:bluetooth-connect$$', h: '4'}
-  - {t: '$$mdi:toggle-switch-outline$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - OUT TOG --- --- ---
   - {type: none}
   - {type: none}
   - $$mdi:brightness-7$$
