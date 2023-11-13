@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-
 // layers ID definition
 #define BASE 0
 #define NAV 1
@@ -32,7 +31,6 @@
 #define meh LG(LC(LALT))
 #define hyper LG(LC(LS(LALT)))
 #define deg RA(LS(N8))
-#define HR_APP LG(LS(SPACE))
 
 // OSX specific macros
 #define undo LG(Z)
@@ -183,18 +181,19 @@
             bindings = <&kp COLON>, <&kp SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        dot_comma: dot_comma {
+				
+        comma_lt: comma_lt {
             compatible = "zmk,behavior-mod-morph";
-            label = "DOT_TO_COMMA";
+            label = "COMMA_TO_LESSTHAN";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COMMA>;
+            bindings = <&kp COMMA>, <&kp LT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        lt_gt: lt_gt {
+        dot_gt: dot_gt {
             compatible = "zmk,behavior-mod-morph";
-            label = "LESSTHAN_TO_GREATERTHAN";
+            label = "DOT_TO_GREATERTHAN";
             #binding-cells = <0>;
-            bindings = <&kp LT>, <&kp GT>;
+            bindings = <&kp DOT>, <&kp GT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         sqt_dqt: sqt_dqt {
@@ -202,27 +201,6 @@
             label = "SINGLE_TO_DOUBLEQUOTE";
             #binding-cells = <0>;
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-				dot_colon: dot_colon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_TO_COLON";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        comma_semi: comma_semi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_TO_SEMICOLON";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMICOLON>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        quest_excl: quest_excl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "quest_to_excl";
-            #binding-cells = <0>;
-            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         single_to_doublequote: single_to_doublequote {
@@ -344,9 +322,9 @@
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
                 &hml LCTRL A   &hml LALT S    &hml LGUI   H  &hml LSHIFT T  &kp G                &kp Y          &hmr RSHIFT N  &hmr RGUI E    &hmr RALT O    &hmr RCTRL I
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                &kp Z          &kp X          &kp M          &kp C          &kp V                &kp K          &kp L          &dot_comma     &lt_gt         &sqt_dqt
+                &kp Z          &kp X          &kp M          &kp C          &kp V                &kp K          &kp L          &comma_lt      &dot_gt        &sqt_dqt
              //╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                              &kp BSPC       &lt_spc NUM 0  &lt NAV RET          &lt SYM ESC    &lt NUM TAB    &kp DEL
+                                              ___            &lt_spc NUM    &lt NAV ESC          &lt SYM ENT    &kp TAB        ___
              //                              ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯
             >;
         };
@@ -359,7 +337,7 @@
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
                 &sk LCTRL      &sk LALT       &sk LGUI       &sk LSHIFT     ___                  &kp LA(DEL)    &kp LEFT       &kp DOWN       &kp RIGHT      &kp LC(LG(Q))
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                ___            ___            ___            &kp LC(TAB)    ___                  ___            &kp DSK_PREV   &kp HR_APP     &kp DSK_NEXT   ___
+                ___            ___            ___            &kp LC(TAB)    ___                  ___            &kp DSK_PREV                  &kp DSK_NEXT   ___
              //╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
                                               &trans         &trans         &trans               &trans         &trans         &trans
              //                              ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯
@@ -385,13 +363,13 @@
             label = "NUM";
             bindings = <
              //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮     ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-                &kp F12        &kp F7         &kp F8         &kp F9         &kp KP_MULTIPLY      &kp KP_PLUS    &kp KP_N7      &kp KP_N8      &kp KP_N9      ___
+                &kp F12        &kp F7         &kp F8         &kp F9         ___                  &kp KP_PLUS    &kp KP_N7      &kp KP_N8      &kp KP_N9      &kp KP_DIVIDE
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                &kp F11        &kp F4         &kp F5         &kp F6         &kp KP_DIVIDE        &kp KP_MINUS   &kp KP_N4      &kp KP_N5      &kp KP_N6      &kp E
+                &kp F11        &kp F4         &kp F5         &kp F6         ___                  &kp KP_MINUS   &kp KP_N4      &kp KP_N5      &kp KP_N6      &kp KP_MULIPLY
              //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-                &kp F10        &kp F1         &kp F2         &kp F3         ___                  &kp KP_N0      &kp KP_N1      &kp KP_N2      &kp KP_N3      ___
+                &kp F10        &kp F1         &kp F2         &kp F3         ___                  ___            &kp KP_N1      &kp KP_N2      &kp KP_N3      &kp E
              //╰──────────────┴──────────────┼──────────────┼──────────────┼──────────────┤     ├──────────────┼──────────────┼──────────────┼──────────────┴──────────────╯
-                                              &trans         &trans         &trans               &trans         &trans         &trans
+                                              &trans         &trans         &trans               &trans         &kp KP_N0      &kp DOT  
              //                              ╰──────────────┴──────────────┴──────────────╯     ╰──────────────┴──────────────┴──────────────╯
             >;
         };
